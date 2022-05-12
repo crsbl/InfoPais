@@ -1,0 +1,19 @@
+.flexBoxRow {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flexBoxRowWrap {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flexBoxColumn {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.flexBoxColumnWrap {
+  display: flex;
+  flex-flow: column wrap;
+}
