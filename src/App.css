@@ -15,7 +15,7 @@ body,
   background-color: rgb(238, 245, 235);
 }
 header {
-  padding: 2rem 0 2rem 0;
+  padding: 1rem 0 1rem 0;
   display: flex;
   justify-content: center;
 }
@@ -24,21 +24,21 @@ header > h1 {
   font-size: 3rem;
   overflow: hidden;
   padding: 0rem 1rem 0rem 0;
-  color: rgb(187, 190, 165);
+  color: rgb(179, 184, 143);
   text-align: center;
-  background-color: rgb(200, 221, 230);
+  background-color: rgb(185, 221, 236);
   border-radius: 0.5rem;
 }
 header > h1:before {
   color: rgb(184, 163, 163);
   content: "Datos";
-  background-color: rgb(212, 228, 223);
+  background-color: rgb(194, 240, 209);
   padding: 0 1rem 0 1rem;
 }
 
 
 .divContenedorBuscar {
-  margin: 1rem 0 0 0;
+
   border-bottom: solid 0.1rem rgb(207, 199, 199);
   padding: 1rem 2rem 1rem 2rem;
   align-items: center;
@@ -98,22 +98,25 @@ font-family: Goldman, cursive;
 }
 
 article{
+  width: 16em;
   padding: .5rem 1rem .5rem 1rem;
   border: .1rem solid rgb(221, 221, 221);
-  background-color: aliceblue;
+  background-color: rgb(251, 252, 244);
   border-radius: .3rem;
   display: flex;
   flex-flow: column nowrap;
-  align-items: left;
+
 }
 article >h1{
-  font-size: 2rem;
-  color: #63b4d4;
+  font-size: 1.7rem;
+  color: #8acee9;
 }
 .divContenedorDatosArticulo{
   gap: 1rem;
+  
 }
 .divContenedorDatosArticulo > h2{
+  font-size: 1.2rem;
   font-family: Goldman, cursive;
   }
 
@@ -126,11 +129,32 @@ color:rgb(90, 168, 138);
   }
 
   .divContenedorArticulos{
-    margin: 2rem 0 0 0;
-    padding: .5rem .5rem 2rem .5rem;
-background-color: rgb(215, 227, 233);
+    margin: 1rem 0 0 0;
+    padding: .5rem .5rem .5rem .5rem;
+background-color: rgb(231, 240, 245);
     width:99vw;
-    display: flex;
-    align-items: center;
+   justify-content: center;
+    gap: .5rem;
+  }
+
+  .divContenedorPaginacion{
+    gap: 0.3rem;
+    width:99vw;
+    justify-content: center;
+    padding: .4rem  0 4rem 0;
+  }
+
+  .divContenedorPaginacion > button{
+    border-radius: .3rem;
+    padding:.4rem;
+    cursor: pointer;
+    color: white;
+    border:0;
+    border-bottom: solid .1rem wheat;
+    background-color: #8acee9;
+    width: 2rem;
     
+  }
+  .divContenedorPaginacion > button:hover{
+    background-color: #74b3cc;
   }
