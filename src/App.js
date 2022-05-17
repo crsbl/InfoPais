@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./App.css";
-import "./constantes.css";
+import "./estilos/App.css";
+import "./estilos/AppResponsive.css";
 import { useQuery } from "@apollo/react-hooks";
 import graphqlQuery from "./graphql";
 import Paginacion from "./componentes/paginacion";
@@ -60,8 +60,8 @@ const App = () => {
     filtrarLista(OrdenarPaisesPor(listaPaises), estadoInput.buscar);
 
   const ResultadoBusqueda = () => {
-    if (loading) return <p>Loading ...</p>;
-    if (error) return <p>error</p>;
+    if (loading) return <p className="parratoCargando">Loading ...</p>;
+    if (error) return <p className="parratoError">error</p>;
 
     if (data) {
       return configurarArrayDatos(data)
@@ -70,22 +70,21 @@ const App = () => {
           estadoBotones.EstadoPagina * 10 + 10
         )
         .map((listaBusqueda, index) => (
-          <article className="flexBox RowWarp" key={index}>
-            <h1>Pais</h1>
-            <div className="divContenedorDatosArticulo flexBoxRow">
-              <h2>Nombre:</h2>
+          <article key={index}>
+            <div className="divContenedorDatosArticuloTitulo ">
+              <h1>Pais</h1>
               <h2>{listaBusqueda.name}</h2>
             </div>
-            <div className="divContenedorDatosArticulo flexBoxRow">
+            <div className="divContenedorDatosArticulo ">
               <h2>Capital:</h2>
               <h2>{listaBusqueda.capital}</h2>
             </div>
-            <div className="divContenedorDatosArticulo flexBoxRow">
+            <div className="divContenedorDatosArticulo ">
               <h2>lenguas:</h2>
               <h2>{listaBusqueda.languages[0]?.name}</h2>
             </div>
 
-            <div className="divContenedorDatosArticulo flexBoxRow">
+            <div className="divContenedorDatosArticulo ">
               <h2>Continente:</h2>
               <h2>{listaBusqueda.continent.name}</h2>
             </div>
@@ -97,12 +96,12 @@ const App = () => {
   };
 
   return (
-    <div className="divContenedorApp flexBoxColumn">
+    <div className="divContenedorApp">
       <header>
         <h1> Paises</h1>
       </header>
-      <main className="flexBoxColumn">
-        <div className="divContenedorBuscar flexBoxColumn">
+      <main>
+        <div className="divContenedorBuscar">
           <input
             spellCheck={false}
             value={estadoInput.buscar}
@@ -112,7 +111,7 @@ const App = () => {
             }}
           />
 
-          <div className="divContenedorOrdenarPor flexBoxRow">
+          <div className="divContenedorOrdenarPor">
             <h3>Ordenar por</h3>
             <button
               style={
@@ -138,10 +137,10 @@ const App = () => {
             </button>
           </div>
         </div>
-        <div className="divContenedorArticulos flexBoxRowWrap">
+        <div className="divContenedorArticulos">
           <ResultadoBusqueda />
         </div>
-        <div className="divContenedorPaginacion flexBoxRow">
+        <div className="divContenedorPaginacion ">
           <Paginacion
             query={[loading, error]}
             hookEstadoPagina={estadoBotones}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Paginacion = ({
   query,
@@ -7,23 +7,17 @@ const Paginacion = ({
   datos,
 }) => {
   const [estadoCantidad, setEstadoCantidad] = useState(0);
-  if (query[0]) return <p>Loading ...</p>;
-  if (query[1]) return <p>error</p>;
+  if (query[0]) return <p className="parratoCargando">Loading ...</p>;
+  if (query[1]) return <p className="parratoError">error</p>;
 
   let cantidadPaginas = [];
 
   let cantidadPaginaMod = datos.length % 10;
-  let cantidadExactaPaginas = datos.length /10;
+  let cantidadExactaPaginas = datos.length / 10;
 
-
-
-
-if(cantidadPaginaMod !== 0){
-  cantidadExactaPaginas= Math.floor(cantidadExactaPaginas)+1;
-}
-
-console.log(cantidadExactaPaginas, datos.length);
-
+  if (cantidadPaginaMod !== 0) {
+    cantidadExactaPaginas = Math.floor(cantidadExactaPaginas) + 1;
+  }
 
   for (let i = 0; i < cantidadExactaPaginas; i++) {
     cantidadPaginas.push([i]);
@@ -35,7 +29,7 @@ console.log(cantidadExactaPaginas, datos.length);
         name={[paginas[0]]}
         style={
           hookEstadoPagina.EstadoPagina == paginas[0]
-            ? { backgroundColor: "#74b3cc" }
+            ? { backgroundColor: "rgb(95, 149, 170)" }
             : { backgroundColor: "" }
         }
         onClick={() => {
