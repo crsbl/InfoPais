@@ -2,7 +2,7 @@ Pregunta:
 "La tabla que contiene la información correspondiente a la asistencia diaria de un niño en un colegio tiene 90 millones de filas. Todas las tablas del sistema existen en la misma BDD en MySQL. La lógica del backend que actualiza la información correspondiente al pasar la asistencia tiene un tiempo de servicio p95 de 10 segundos. El equipo está interesado en bajar este tiempo para mejorar la experiencia del usuario (y porque nos gusta pensar en Kimche como un Ferrari). ¿Qué propondrías para enfrentar el problema? Esta pregunta es abierta, no hay respuestas malas. Puedes proponer arquitectura, tecnologías, diseño, etc."
 
 Respuesta:
-lo mejor seria, agregar la mayor cantidad de filtros posibles como, colegio, curso, año, mes y una paginacion, donde la query, limite los datos entregados, a solo una pagina por consulta.
+creo que lo mejor seria, agregar la mayor cantidad de filtros posibles como, colegio, curso, año, mes y una paginacion, donde la query, limite los datos entregados, a solo una pagina por consulta.
 
 
 
