@@ -28,7 +28,7 @@ const App = () => {
       return str.name.toLowerCase().indexOf(input) !== -1;
     });
   };
-  const OrdenarPaisesPor = (dataApollo) => {
+  const ordenarPaisesPor = (dataApollo) => {
     let nombre1 = null;
     let nombre2 = null;
     return dataApollo?.countries?.sort((a, b) => {
@@ -57,7 +57,8 @@ const App = () => {
     });
   };
   let configurarArrayDatos = (listaPaises) =>
-    filtrarLista(OrdenarPaisesPor(listaPaises), estadoInput.buscar);
+    filtrarLista(ordenarPaisesPor(listaPaises), estadoInput.buscar);
+
 
   const ResultadoBusqueda = () => {
     if (loading) return <p className="parratoCargando">Loading ...</p>;
@@ -72,7 +73,7 @@ const App = () => {
         .map((listaBusqueda, index) => (
           <article key={index}>
             <div className="divContenedorDatosArticuloTitulo ">
-              <h1>Pais</h1>
+              <h1>Pais {listaBusqueda.emoji}</h1>
               <h2>{listaBusqueda.name}</h2>
             </div>
             <div className="divContenedorDatosArticulo ">

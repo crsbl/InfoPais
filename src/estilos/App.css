@@ -6,6 +6,8 @@ body,
   display: flex;
   flex-flow: column nowrap;
 }
+
+
 body {
   background-color: rgb(222, 243, 236);
 
@@ -62,8 +64,6 @@ header > h1:before {
   padding: .5rem 1rem .5rem 1rem;
   align-items: center;
   justify-content: center;
-
-  border-radius: .3rem;
 }
 
 .divContenedorBuscar > input {
@@ -89,7 +89,7 @@ header > h1:before {
 .parratoError{
   font-size: 1.5rem;
   font-weight: 800;
-  color: #af986c;
+  color: #d3a897;
 }
 main {
   display: flex;
@@ -153,7 +153,17 @@ article:hover{
   box-shadow: .05rem .05em .5rem .1rem rgba(56, 68, 64, 0.411);
 }
 
+
+@font-face {
+  font-family: NotoColorEmojiLimited;
+  unicode-range: U+1F1E6-1F1FF;
+  src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
+}
+
 article > .divContenedorDatosArticuloTitulo h1 {
+  font-family: 'NotoColorEmojiLimited', -apple-system, BlinkMacSystemFont, 
+  'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 
+  'Segoe UI Emoji', 'Segoe UI Symbol';
   padding: 0 0 0 .3rem;
   font-size: 1.7rem;
   color: #d6dfe2;
@@ -163,7 +173,7 @@ article > .divContenedorDatosArticuloTitulo h1 {
   display: flex;
   flex-flow: row nowrap;
 width: 100%;
-  
+  gap: .5rem;
 }
 .divContenedorDatosArticuloTitulo{
   display: flex;
