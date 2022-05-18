@@ -24,9 +24,10 @@ const Paginacion = ({
   }
 
   if (datos) {
-    return cantidadPaginas.map((paginas) => (
+    return cantidadPaginas.map((paginas, index) => (
       <button
         name={[paginas[0]]}
+        key={index}
         style={
           hookEstadoPagina.EstadoPagina == paginas[0]
             ? { backgroundColor: "rgb(95, 149, 170)" }

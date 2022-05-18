@@ -6,6 +6,8 @@ const graphqlQuery = () => ({
       countries {
         name,
         capital,
+        emoji,
+        emojiU,
         continent {
           name
         },
