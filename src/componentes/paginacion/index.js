@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Paginacion = ({
   query,
@@ -6,7 +6,6 @@ const Paginacion = ({
   hookEstadoPagina,
   datos,
 }) => {
-  const [estadoCantidad, setEstadoCantidad] = useState(0);
   if (query[0]) return <p className="parratoCargando">Loading ...</p>;
   if (query[1]) return <p className="parratoError">error</p>;
 
@@ -29,7 +28,7 @@ const Paginacion = ({
         name={[paginas[0]]}
         key={index}
         style={
-          hookEstadoPagina.EstadoPagina == paginas[0]
+          hookEstadoPagina.EstadoPagina === paginas[0]
             ? { backgroundColor: "rgb(95, 149, 170)" }
             : { backgroundColor: "" }
         }
