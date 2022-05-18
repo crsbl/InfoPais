@@ -19,7 +19,7 @@ const App = () => {
   const cambiarOrden = (e) => {
     setEstadoBotones({
       ...estadoBotones,
-      SeleccionOrden: e.currentTarget.name == "Continente" ? 0 : 1,
+      SeleccionOrden: e.currentTarget.name === "Continente" ? 0 : 1,
     });
   };
 
@@ -116,7 +116,7 @@ const App = () => {
             <h3>Ordenar por</h3>
             <button
               style={
-                estadoBotones.SeleccionOrden == 0
+                estadoBotones.SeleccionOrden === 0
                   ? { backgroundColor: "antiquewhite" }
                   : { backgroundColor: "" }
               }
@@ -127,7 +127,7 @@ const App = () => {
             </button>
             <button
               style={
-                estadoBotones.SeleccionOrden == 1
+                estadoBotones.SeleccionOrden === 1
                   ? { backgroundColor: "antiquewhite" }
                   : { backgroundColor: "" }
               }
